@@ -14,7 +14,7 @@
 	<body>
 		<div class="container">
 			<header class="header">
-				<h1>Payment Failed!<span>Alas, You couldn't make your donation @TheSparksFoundation. TRY AGAIN!!</span></h1>
+				<h1>Payment Failed!<span>Alas, You couldn't make your donation @TheSparksFoundation. Please TRY AGAIN!!</span></h1>
 								</header>
 			
 			<section class="content">
