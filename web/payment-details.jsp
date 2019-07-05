@@ -1,6 +1,5 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.security.*" %>
-
 <%!
 public boolean empty(String s)
 	{
@@ -19,8 +18,6 @@ public boolean empty(String s)
 		algorithm.reset();
 		algorithm.update(hashseq);
 		byte messageDigest[] = algorithm.digest();
-            
-		
 
 		for (int i=0;i<messageDigest.length;i++) {
 			String hex=Integer.toHexString(0xFF & messageDigest[i]);
@@ -31,8 +28,6 @@ public boolean empty(String s)
 		}catch(NoSuchAlgorithmException nsae){ }
 		
 		return hexString.toString();
-
-
 	}
 %>
 <% 	
@@ -42,9 +37,6 @@ public boolean empty(String s)
 	String base_url="https://sandboxsecure.payu.in";
 	int error=0;
 	String hashString="";
-	
- 
-
 	
 	Enumeration paramNames = request.getParameterNames();
 	Map<String,String> params= new HashMap<String,String>();
@@ -91,9 +83,7 @@ public boolean empty(String s)
 				hashString= (empty(params.get(part)))?hashString.concat(""):hashString.concat(params.get(part));
 				hashString=hashString.concat("|");
 			}
-			hashString=hashString.concat(salt);
-			
-
+			hashString=hashString.concat(salt);		
 			 hash=hashCal("SHA-512",hashString);
 			action1=base_url.concat("/_payment");
 		}
@@ -102,9 +92,7 @@ public boolean empty(String s)
 	{
 		hash=params.get("hash");
 		action1=base_url.concat("/_payment");
-	}
-		
-
+	}		
 %>
 <html>
     <title>Payment Form!</title>
