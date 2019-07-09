@@ -1,7 +1,7 @@
 # tsf-donation
 The Sparks Foundation Donation Website comprising of Payment Gateway Integration for Donating specific amount of Money directly to the Foundation.
 
-@Tech Stack:
+@Tech Stack Used:
 - Front-End Technologies:
 HTML, CSS, JavaScript, jQuery, Material-Design, BootStrap4
 - Back-End: 
